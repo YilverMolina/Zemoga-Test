@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="./css/styles.css" />
 </head>
 
-<body>
+<body onload="loadVotesCards()">
     <section id="banner">
         <header>
             <a href="index.html">Rule of Thumb.</a>
@@ -27,7 +27,7 @@
                         </li>
                     </ul>
                 </nav>
-                <i id="icn-menu" class="fa fa-bars icn-menu"></i>
+                <i id="icn-menu" class="fa fa-bars icn-menu" onclick="openCloseMobileMenu()"></i>
             </div>
         </header>
         <div class="main-card">
@@ -101,6 +101,8 @@
             </span>
         </div>
     </footer>
+    <script src="js/index/votes.js"></script>
+    <script src="js/shared/menu.js"></script>
 </body>
 
 </html>
