@@ -9,7 +9,7 @@ body {
 
 @font-face {
   font-family: "Lato";
-  src: url("../../fonts/Lato-Light.ttf") format("truetype");
+  src: url("../fonts/Lato-Light.ttf") format("truetype");
 }
 
 .visible {
@@ -243,7 +243,7 @@ footer .footer-social i {
 /* Spacing */
 #banner {
   height: 720px;
-  background-image: url("../../img/Pope.png");
+  background-image: url("../img/Pope.png");
   background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -776,7 +776,7 @@ footer .footer-social i {
 
 .submit ::before {
   content: "";
-  background-image: url("../../img/BgSubmit.png");
+  background-image: url("../img/BgSubmit.png");
   background-position: 50% 45%;
   background-size: cover;
   position: absolute;
