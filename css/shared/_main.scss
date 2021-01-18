@@ -1,0 +1,34 @@
+@import "variables";
+
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  overflow-x: hidden;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("../../fonts/Lato-Light.ttf") format("truetype");
+}
+
+.visible {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+#title {
+  margin: $space-inset-l $margin-space;
+
+  > h1 {
+    font-size: 32pt;
+  }
+}
+
+@media (max-width: $col-md) {
+  #title {
+    margin: $space-inset-l $margin-space-mobile;
+  }
+}

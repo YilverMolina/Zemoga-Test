@@ -1,0 +1,57 @@
+@import "../shared/variables";
+
+.submit {
+  display: flex;
+  position: relative;
+  min-height: 80px;
+  padding: 16px 24px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 32px $margin-space;
+
+  ::before {
+    content: "";
+    background-image: url("../../img/BgSubmit.png");
+    background-position: 50% 45%;
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.1;
+  }
+
+  > p {
+    font-size: 28px;
+    opacity: 0.6;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  > button {
+    font-size: 18px;
+    height: 48px;
+    opacity: 1;
+    font-weight: 600;
+    width: 200px;
+    cursor: pointer;
+    border: 3px solid black;
+    font-family: "Lato";
+  }
+}
+
+@media (max-width: $col-sm) {
+  .submit {
+    flex-direction: column;
+    > button {
+      margin-top: $space-inset-s;
+    }
+  }
+}
+
+@media (max-width: $col-md) {
+  .submit {
+    margin: 32px $margin-space-mobile;
+  }
+}

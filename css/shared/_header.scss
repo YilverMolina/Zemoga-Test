@@ -1,0 +1,119 @@
+@import "variables";
+$header-height: 112px;
+
+header {
+  display: flex;
+  align-items: center;
+  padding: $space-inset-s $margin-space;
+  justify-content: space-between;
+  min-height: $header-height;
+  max-width: 100%;
+  background: linear-gradient(to bottom, #000000a9, transparent);
+
+  > a {
+    color: #fff;
+    font-size: 32px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  nav {
+    ul {
+      list-style: none;
+
+      li {
+        display: inline;
+        margin: 0 0 0 $space-inset-xl;
+
+        a {
+          text-decoration: none;
+          color: #fff;
+          font-size: 15px;
+          font-weight: 600;
+          opacity: 0.7;
+        }
+
+        a:hover {
+          opacity: 1;
+        }
+      }
+    }
+
+    .icn-search {
+      font-size: 24px;
+    }
+  }
+
+  .icn-menu {
+    font-size: 24px;
+    color: #fff;
+    display: none;
+    cursor: pointer;
+  }
+}
+
+.general-header {
+  background: linear-gradient(to bottom, $thumbs-up, transparent);
+
+  nav > ul > li > a {
+    opacity: 1;
+  }
+}
+
+@media (max-width: $col-md) {
+  header {
+    padding: $space-inset-s $margin-space-mobile;
+  }
+}
+
+@media (max-width: $col-lg) {
+  header {
+    nav {
+      display: none;
+    }
+    .icn-menu {
+      display: block;
+    }
+
+    .mobile-menu-visible {
+      nav {
+        z-index: 1000;
+        display: block;
+        position: fixed;
+        width: $col-xs;
+        background: #f0f0f0;
+        height: 100vh;
+        top: 0;
+        right: 0;
+        box-shadow: -3px 0 10px rgba(0, 0, 0, 0.2);
+        transition: right 2s;
+
+        > ul {
+          padding: $space-inset-l $space-inset-m;
+
+          > li {
+            margin: $space-inset-m 0;
+            display: block;
+
+            > a {
+              color: #000;
+              opacity: 0.7;
+            }
+
+            > a:hover {
+              opacity: 1;
+            }
+          }
+        }
+      }
+
+      .icn-menu {
+        color: #000;
+        position: fixed;
+        top: $space-inset-m;
+        right: $space-inset-m;
+        z-index: 1001;
+      }
+    }
+  }
+}

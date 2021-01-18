@@ -1,0 +1,191 @@
+@import "../shared/variables";
+
+.votes {
+  margin: 32px $margin-space;
+
+  > h1 {
+    font-size: 40px;
+  }
+
+  > div {
+    display: inline-flex;
+    flex-wrap: wrap;
+    .votes__card {
+      width: calc(50% - 20px);
+      margin-bottom: 20px;
+      margin-top: 20px;
+      position: relative;
+      height: 480px;
+      background-position: 0% 120%;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+
+      .thumbs-up {
+        background-color: $thumbs-up;
+      }
+
+      .thumbs-down {
+        background-color: $thumbs-down;
+      }
+
+      .thumbs {
+        width: 32px;
+        height: 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+
+        > i {
+          font-size: 20px;
+        }
+      }
+
+      .thumbs-selected {
+        border: 2px solid #fff;
+      }
+
+      .thumbs-highlighted {
+        border: 2px solid lightgray;
+      }
+
+      &--result {
+        position: absolute;
+        left: 0;
+        top: 224px;
+      }
+
+      &--body {
+        background: linear-gradient(to top, #000000a9, #000000a9, transparent);
+        padding: 40px;
+        color: #fff;
+
+        &--title {
+          font-size: 42px;
+          font-weight: 600;
+          margin: 0;
+        }
+
+        &--date-category {
+          font-size: 13px;
+          margin: 0;
+          margin-bottom: 10px;
+        }
+
+        &--description {
+          font-size: 17px;
+          line-height: 17px;
+        }
+
+        &--buttons {
+          display: flex;
+          align-items: center;
+
+          div,
+          button {
+            margin-right: 10px;
+          }
+
+          button {
+            border: 2px solid #fff;
+            background: transparent;
+            color: #fff;
+            height: 40px;
+            padding: 0 16px;
+            cursor: pointer;
+            font-size: 15px;
+            font-family: "Lato";
+          }
+        }
+      }
+
+      &--footer {
+        display: flex;
+        opacity: 0.9;
+        justify-content: space-between;
+        align-items: center;
+        height: 48px;
+
+        > div {
+          height: 100%;
+          padding: 0 12px;
+          display: flex;
+          align-items: center;
+          font-size: 28px;
+          color: #fff;
+
+          > i {
+            margin: 0 5px;
+          }
+        }
+
+        &--thumbs-up {
+          width: 64%;
+          background-color: $thumbs-up;
+          justify-content: flex-start;
+        }
+
+        &--thumbs-down {
+          width: 36%;
+          background-color: $thumbs-down;
+          justify-content: flex-end;
+        }
+      }
+    }
+
+    .votes__card:nth-child(n) {
+      margin-right: 20px;
+    }
+    .votes__card:nth-child(2n) {
+      margin-right: 0;
+      margin-left: 20px;
+    }
+  }
+}
+
+@media (max-width: $col-md) {
+  .votes {
+    margin: 32px $margin-space-mobile;
+
+    > div {
+      .votes__card {
+        min-height: 400px;
+        width: 100%;
+        margin: 0;
+
+        &--result {
+          top: 164px;
+        }
+      }
+
+      .votes__card:nth-child(n) {
+        margin: 0;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: $col-xl) {
+  .votes > div > .votes__card {
+    background-position: 80%;
+    min-height: 400px;
+  }
+}
+
+@media (min-width: $col-xl) {
+  .votes > div > .votes__card {
+    background-position: 10%;
+    min-height: 600px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .votes > div > .votes__card {
+    background-position: 10%;
+    min-height: 800px;
+  }
+}
+

@@ -1,0 +1,72 @@
+@import "../shared/variables";
+
+.counted {
+  background-color: #ededed;
+  margin: $space-inset-l $margin-space;
+  padding: 20px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  p {
+    margin: 0;
+  }
+
+  &__title {
+    p {
+      white-space: nowrap;
+    }
+    > :first-child {
+      font-size: 23px;
+      color: gray;
+    }
+    > :last-child {
+      font-size: 40px;
+      line-height: 32px;
+      font-weight: 600;
+    }
+  }
+
+  &__text {
+    margin: 0 16px;
+    font-size: 16px;
+    color: gray;
+  }
+
+  &__icons {
+    width: 64px;
+    font-size: 24px;
+    text-align: right;
+
+    > span {
+      cursor: pointer;
+    }
+
+    > span:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+@media (max-width: $col-md) {
+  .counted {
+    flex-direction: column;
+    margin: $space-inset-l $margin-space-mobile;
+    padding-right: 40px;
+    position: relative;
+
+    &__title {
+      margin-bottom: $space-inset-s;
+      p {
+        white-space: normal;
+        word-break: break-all;
+      }
+    }
+
+    &__icons {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+    }
+  }
+}
