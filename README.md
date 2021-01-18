@@ -30,7 +30,7 @@ IMPORTANT: CSS files have been preprocessed from SCSS using the extension `Live 
 
 ## Branches
 * `layout`: contains the layout part: CSS, Fonts, images and HTML files.
-* `layout`: contains the interactive part: JS files.
+* `interactive`: contains the interactive part: JS files.
 * `master`: contains both of the previous ones.
 
 ## Deployment
