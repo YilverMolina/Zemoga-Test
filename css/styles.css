@@ -609,7 +609,7 @@ footer .footer-social i {
 .votes > div .votes__card--result {
   position: absolute;
   left: 0;
-  top: 224px;
+  top: calc(50% - 16px);
 }
 
 .votes > div .votes__card--body {
@@ -725,9 +725,6 @@ footer .footer-social i {
     min-height: 400px;
     width: 100%;
     margin: 0;
-  }
-  .votes > div .votes__card--result {
-    top: 164px;
   }
   .votes > div .votes__card:nth-child(n) {
     margin: 0;
