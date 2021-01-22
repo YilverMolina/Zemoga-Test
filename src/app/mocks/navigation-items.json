@@ -1,0 +1,12 @@
+[
+    {
+        "id": 1, 
+        "title": "Past Trials", 
+        "url": "/past-trials"
+    },
+    {
+        "id": 2, 
+        "title": "How It Works", 
+        "url": "/how-it-works"
+    }
+]

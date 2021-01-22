@@ -1,0 +1,58 @@
+@import "../../../../assets/styles/variables";
+
+.submit {
+    display: flex;
+    position: relative;
+    min-height: 5em;
+    padding: 1em 1.5em;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2em $margin-space;
+  
+    ::before {
+      content: "";
+      background-image: url("../../../../assets/img/BgSubmit.png");
+      background-position: 50% 45%;
+      background-size: cover;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      opacity: 0.1;
+    }
+  
+    > p {
+      font-size: 1.75em;
+      opacity: 0.6;
+      font-weight: 600;
+      margin: 0;
+    }
+  
+    > button {
+      font-size: 1.1em;
+      height: 3em;
+      opacity: 1;
+      font-weight: 600;
+      width: 200px;
+      cursor: pointer;
+      border: 0.2em solid black;
+      font-family: "Lato";
+    }
+  }
+  
+  @media (max-width: $col-sm) {
+    .submit {
+      flex-direction: column;
+      > button {
+        margin-top: $space-inset-s;
+      }
+    }
+  }
+  
+  @media (max-width: $col-md) {
+    .submit {
+      margin: 2em $margin-space-mobile;
+    }
+  }
+  

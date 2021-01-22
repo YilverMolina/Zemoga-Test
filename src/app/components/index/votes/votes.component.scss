@@ -1,0 +1,65 @@
+@import "../../../../assets/styles/variables";
+
+.votes {
+  margin: 2em $margin-space;
+
+  > h1 {
+    font-size: 2.5em;
+  }
+
+  > div {
+    display: inline-flex;
+    flex-wrap: wrap;
+    app-vote {
+      width: calc(50% - 1.25em);
+      height: 480px;
+      margin-bottom: 1.25em;
+      margin-top: 1.25em;
+    }
+
+    app-vote:nth-child(n) {
+      margin-right: 1.25em;
+    }
+    app-vote:nth-child(2n) {
+      margin-right: 0;
+      margin-left: 1.25em;
+    }
+  }
+}
+
+@media (max-width: $col-md) {
+  .votes {
+    margin: 2em $margin-space-mobile;
+
+    > div {
+      app-vote {
+        min-height: 400px;
+        width: 100%;
+        margin: 0;
+      }
+
+      app-vote:nth-child(n) {
+        margin: 0;
+        margin-bottom: 1.25em;
+      }
+    }
+  }
+}
+
+@media (max-width: $col-xl) {
+  .votes > div > app-vote {
+    min-height: 400px;
+  }
+}
+
+@media (min-width: $col-xl) {
+  .votes > div > app-vote {
+    min-height: 600px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .votes > div > app-vote {
+    min-height: 800px;
+  }
+}

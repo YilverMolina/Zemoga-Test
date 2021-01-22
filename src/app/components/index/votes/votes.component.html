@@ -1,0 +1,9 @@
+<section id="votes" class="votes">
+    <h1>Votes</h1>
+    <div id="votes-container">
+        <app-vote *ngFor="let vote of votes" [vote]="vote" (onVoteNow)="voteNow($event)"
+            (onVoteAgain)="voteAgain($event)" (onSelectThumbsDown)="selectThumbsDown($event)"
+            (onSelectThumbsUp)="selectThumbsUp($event)">
+        </app-vote>
+    </div>
+</section>

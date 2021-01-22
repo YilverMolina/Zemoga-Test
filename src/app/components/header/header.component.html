@@ -1,0 +1,20 @@
+<header class="{{customClass}}">
+    <a [routerLink]="['/']" routerLinkActive="router-link-active" href="#">Rule of Thumb.</a>
+    <div id="navigation-menu" class="mobile-menu-hidden">
+        <nav>
+            <ul>
+                <li *ngFor="let item of navigationItems">
+                    <a [routerLink]="[item.url]" routerLinkActive="router-link-active" href="#">
+                        {{item.title}}
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-search icn-search"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <i id="icn-menu" class="fa fa-bars icn-menu" appManageMenu></i>
+    </div>
+</header>

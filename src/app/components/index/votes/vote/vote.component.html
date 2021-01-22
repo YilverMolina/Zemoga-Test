@@ -1,0 +1,47 @@
+<div class="votes__card" [ngStyle]="{'background-image': 'url(' + vote.imageUrl + ')'}">
+    <div class="thumbs votes__card--result"
+        [ngClass]="{'thumbs-down': vote.percUp < vote.percDown, 'thumbs-up': vote.percUp > vote.percDown}"
+        [ngStyle]="{'visibility': vote.percUp === vote.percDown ? 'hidden' : 'visible'}">
+        <i class="fa"
+            [ngClass]="{'fa-thumbs-down': vote.percUp < vote.percDown, 'fa-thumbs-up': vote.percUp > vote.percDown}"></i>
+    </div>
+    <div class="votes__card--body">
+        <h1 class="votes__card--body--title">{{vote.name}}</h1>
+        <div class="votes__card--body--date-category">
+            <b>{{vote.date}}</b> in {{vote.category}}
+        </div>
+        <div class="votes__card--body-description">
+            {{vote.message}}
+        </div>
+        <div class="votes__card--body--buttons">
+            <div class="thumbs thumbs-up votes__card--body--buttons--thumbs-up"
+                [ngClass]="{'thumbs-selected': vote.upIsSelected}" (click)="selectThumbsUp(vote)"
+                [ngStyle]="{'display': vote.upVisible ? 'flex':'none'}">
+                <i class="fa fa-thumbs-up"></i>
+            </div>
+            <div class="thumbs thumbs-down votes__card--body--buttons--thumbs-down"
+                [ngClass]="{'thumbs-selected': vote.downIsSelected}" (click)=selectThumbsDown(vote)
+                [ngStyle]="{'display': vote.downVisible ? 'flex':'none'}">
+                <i class="fa fa-thumbs-down"></i>
+            </div>
+            <button class="votes__card--body--buttons--vote-now" (click)="voteNow(vote)"
+                [ngStyle]="{'display': vote.nowVisible ? 'block':'none'}">
+                Vote now
+            </button>
+            <button class="votes__card--body--buttons--vote-again hidden" (click)="voteAgain(vote)"
+                [ngClass]="{'hidden': !vote.againVisible}">
+                Vote again
+            </button>
+        </div>
+    </div>
+    <div class="votes__card--footer">
+        <div class="votes__card--footer--thumbs-up" [ngStyle]="{'width': vote.percUp + '%'}">
+            <i class="fa fa-thumbs-up"></i>
+            <span>{{vote.percUp}}%</span>
+        </div>
+        <div class="votes__card--footer--thumbs-down" [ngStyle]="{'width': vote.percDown + '%'}">
+            <i class="fa fa-thumbs-down"></i>
+            <span>{{vote.percDown}}%</span>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,201 @@
+@import "../../../../assets/styles/variables";
+
+#banner {
+    height: 720px;
+    background-image: url("../../../../assets/img/Pope.png");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .main-card {
+    background-color: rgba(99, 97, 97, 0.8);
+    width: 500px;
+    margin-left: $margin-space;
+  
+    &__body {
+      padding: $space-inset-m;
+      color: #fff;
+  
+      &--opinion {
+        font-size: 1em;
+        opacity: 0.8;
+        letter-spacing: 0.4;
+      }
+  
+      &--title {
+        font-size: 3.5em;
+        margin: 0;
+        letter-spacing: 3;
+      }
+  
+      &--text {
+        font-size: 1.3em;
+        opacity: 0.8;
+        letter-spacing: 0.4;
+      }
+  
+      &--more-info {
+        > a {
+          font-size: 0.9em;
+          color: #fff;
+          opacity: 0.8;
+        }
+      }
+  
+      &--verdict {
+        font-size: 1.25em;
+        margin-bottom: 0;
+        letter-spacing: 0.4;
+      }
+    }
+  
+    &__footer {
+      display: flex;
+      justify-content: space-between;
+      height: 4.5em;
+  
+      > div {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        color: #fff;
+  
+        > i {
+          font-size: 2.5em;
+        }
+      }
+  
+      > :first-child {
+        background-color: $thumbs-up;
+      }
+  
+      > :last-child {
+        background-color: $thumbs-down;
+      }
+    }
+  }
+  
+  .closing-footer {
+    height: 3.25em;
+    width: 100%;
+    display: flex;
+  
+    &__text {
+      position: relative;
+      width: 33%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      background-color: rgba(66, 66, 66, 0.3);
+  
+      > span {
+        color: #fff;
+        margin-right: 0.75em;
+        font-size: 0.8em;
+        opacity: 0.8;
+        font-weight: 600;
+      }
+    }
+  
+    &__text::before {
+      content: "";
+      position: absolute;
+      top: 1.43em;
+      left: 100%;
+      width: 0;
+      height: 0;
+      border-width: 0.375em;
+      border-style: solid;
+      border-color: transparent transparent transparent rgba(66, 66, 66, 0.8);
+    }
+  
+    &__number {
+      width: 67%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      background-color: lightgray;
+      opacity: 0.6;
+      font-size: 2.25;
+  
+      > span {
+        margin-left: 0.75em;
+      }
+    }
+  }
+  
+  @media (max-width: $col-xs) {
+    #banner {
+      min-height: 600px;
+      height: auto;
+      background-position: 80%;
+    }
+  }
+  
+  @media (min-width: $col-xs) and (max-width: $col-md) {
+    #banner {
+      min-height: 52.5em;
+      height: auto;
+      background-position: 80%;
+    }
+  }
+  
+  @media (min-width: $col-xl) {
+    #banner {
+      background-position: 5% 25%;
+    }
+  }
+  
+  @media (max-width: $col-md) {
+    .main-card {
+      margin: auto;
+      width: 90%;
+  
+      &__body {
+        padding: 1.25em;
+  
+        &--opinion {
+          font-size: 0.9em;
+        }
+  
+        &--title {
+          font-size: 2.5em;
+          margin: 0;
+        }
+  
+        &--text {
+          font-size: 1em;
+        }
+  
+        &--more-info {
+          > a {
+            font-size: 0.9em;
+            color: #fff;
+            opacity: 0.8;
+          }
+        }
+  
+        &--verdict {
+          font-size: 0.9em;
+          margin-bottom: 0;
+          letter-spacing: 0.4;
+        }
+      }
+  
+      &__footer {
+        height: 3.5em;
+  
+        > div {
+          > i {
+            font-size: 2em;
+          }
+        }
+      }
+    }
+  }
+  
